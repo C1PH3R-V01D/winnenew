@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>wine check Project</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <style>
+    
+      body {
+          background-color: #494949 ;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-dark bg-dark text-white">
+        <h3>Wine Quality Check</h3>
+    </nav>
+    {% if result == 0 %}
+    Not Survived
+    {% endif %}
+    {% if result == 1 %}
+    Survived
+    {% endif %}
+   
+    <form method="POST" action="/predict">
+        <label>fixed_acidity</label>
+        <input type="value" name="fixed_acidity" placeholder="Enter fixed_acidity" required><br>
+
+        <label>volatile_acidity</label>
+        <input type="value" name="volatile_acidity" placeholder="Enter volatile_acidity" required><br>
+
+        <label>citric_acid</label>
+        <input type="value" name="citric_acid" placeholder="Enter citric_acid" required><br>
+
+        <label>chlorides</label>
+        <input type="value" name="chlorides" placeholder="Enter chlorides" required><br>
+
+        <label>total_sulfur_dioxide</label>
+        <input type="value" name="total_sulfur_dioxide" placeholder="Enter total_sulfur_dioxide" required><br>
+
+        <label>density</label>
+        <input type="value" name="density" placeholder="Enter density" required><br>
+
+        <label>sulphates</label>
+        <input type="value" name="sulphates" placeholder="Enter sulphates" required><br>
+
+        <label>alcohol</label>
+        <input type="value" name="alcohol" placeholder="Enter alcohol" required><br>
+
+
+
+
+
+        <input type="submit" value="Predict"><br><br>
+
+        
+    </form>
+
+</body>
+</html>
